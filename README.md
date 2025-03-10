@@ -1,11 +1,41 @@
-# Boost C++ Libraries
+# Bibliotecas Boost C++ 
 
-The Boost project provides free peer-reviewed portable C++ source libraries.
+O projeto Boost fornece bibliotecas de código fonte C++ portáteis revisadas por pares gratuitas.
 
-We emphasize libraries that work well with the C++ Standard Library. Boost
-libraries are intended to be widely useful, and usable across a broad spectrum
-of applications. The Boost license encourages both commercial and non-commercial use
-and does not require attribution for binary use.
+Enfatizamos bibliotecas que funcionam bem com a Biblioteca Padrão C++. As bibliotecas Boost
+destinam-se a ser amplamente úteis e utilizáveis ​​em um amplo espectro
+de aplicações. A licença Boost incentiva o uso comercial e não comercial
+e não requer atribuição para uso binário.
 
-The project website is www.boost.org, where you can obtain more information and
-[download](https://www.boost.org/users/download/) the current release.
+O site do projeto é www.boost.org, onde você pode obter mais informações e
+[baixar](https://www.boost.org/users/download/) a versão atual.
+
+## Construindo a biblioteca usando o MSVC (Microsoft Visual Studio) 2022 (Visual c++ 14.3)
+
+### Criando a Infraestrutura de compilação para MSVC (Microsoft Visual Studio) 2022 (Visual c++ 14.3)
+
+```cmd
+bootstrap vc143
+```
+
+### Compilando as biblotecas e gerando os arquivos cabeçalhos
+
+```cmd
+.\b2 && .\b2 headers
+```
+
+### Adicionando o caminho dos aqruivos cabeçalho na variável de ambiente INCLUDE
+```cmd
+
+SET INCLUDE=%INCLUDE%;[caminho onde você baixou o código fonte da biblioteca boost]
+
+```
+
+### Adicionando o caminho dos binários das bibliotecas na variável de ambiente LIB
+```cmd
+
+SET LIB=%LIB%;[caminho onde você baixou o código fonte da biblioteca boost]\stage\lib
+
+```
+
+
